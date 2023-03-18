@@ -10,7 +10,7 @@ node('built-in')
 	}
     stage('Continuous Deployment_loans') 
 	{
-sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war   ubuntu@172.31.48.25:/var/lib/tomcat9/webapps/qaenv1.war'
+sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline_loans/webapp/target/webapp.war   ubuntu@172.31.48.25:/var/lib/tomcat9/webapps/qaenv1.war'
 	}
     stage('Continuous Testing_loans') 
 	{
@@ -18,6 +18,6 @@ sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/weba
 	}
     stage('Continuous Delivery_loans') 
 	{
-sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war   ubuntu@172.31.62.117:/var/lib/tomcat9/webapps/prodenv1.war'
+sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline_loans/webapp/target/webapp.war   ubuntu@172.31.62.117:/var/lib/tomcat9/webapps/prodenv1.war'
 	}
 }
